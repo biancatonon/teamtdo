@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>TDO SYSTEM</title>
+	<link rel="icon" href="iconsite.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+
+body, html {
+  font-family: 'Comfortaa', cursive;
+  background-color: #bfbfb4;
+  background-image: url('worldd.png');
+  background-opacity: 0.2; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin-top: 35px;
+}
+
+#overlay, #overlay2 {
+  height: 100%;
+  position: fixed;
+  display: none;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  cursor: pointer;
+  border-radius: 20px;
+  z-index: 3;
+}
+
+#header0{
+  width:100%;
+  height:40px;
+  font-size: 35px;
+  box-shadow: 15px 0 0 0 #000, -5px 0 0 0 #000;
+  background: #000;
+  display: inline;
+  padding: 3px 0 !important;
+  position: relative;
+  left: 500px;
+  color: white;
+  text-align: center;
+  }
+
+#text0 {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  font-size: 20px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+#header{
+  width:100%;
+  height:40px;
+  font-size: 35px;
+  box-shadow: 15px 0 0 0 #000, -5px 0 0 0 #000;
+  background: #000;
+  display: inline;
+  padding: 3px 0 !important;
+  position: relative;
+  left: 500px;
+  color: white;
+  text-align: center;
+  }
+
+#conteudo{
+  width:100%;
+  height:500px;  
+} 
+
+#conteudo-left{
+  width:50%;
+  height:450px;
+  float:left;
+  }
+
+.pht1 {
+  float: left;
+  margin-top: 6%;
+  margin-left: 5%;
+  border: 8px solid #000;
+  background-color: #fff; 
+  box-shadow: 5px 5px #fff;
+}
+
+p {
+  font-size: 25px;
+  font-weight: bold;
+  text-shadow: 2px 2px #7575a3;
+}
+
+#text1 {
+  position: absolute;
+  top: 15%;
+  left: 22%;
+  font-size: 20px;
+  color: white;
+  text-align: left;
+}
+
+.pht2 {
+  float: left;
+  margin-top: 48%;
+  margin-left: -36%;
+  border: 8px solid #000;
+  background-color: #fff; 
+  box-shadow: 5px 5px #fff
+}
+
+#text2 {
+  position: absolute;
+  top: 58%;
+  left: 22%;
+  font-size: 20px;
+  color: white;
+  text-align: left;
+}
+
+#conteudo-right{
+  width:50%;
+  height:450px;
+  float:left;
+}
+
+.pht3 {
+  float: left;
+  margin-top: 6%;
+  margin-left: 5%;
+  border: 8px solid #000;
+  background-color: #fff; 
+  box-shadow: 5px 5px #fff
+}
+
+#text3 {
+  position: absolute;
+  top: 15%;
+  margin-left: 22%;
+  font-size: 20px;
+  color: white;
+  text-align: left;
+  float: right;
+}
+
+.pht4 {
+  float: left;
+  margin-top: 48%;
+  margin-left: -36%;
+  border: 8px solid #000;
+  background-color: #fff; 
+  box-shadow: 5px 5px #fff
+}
+
+#text4 {
+  position: absolute;
+  top: 58%;
+  margin-left: 22%;
+  font-size: 20px;
+  color: white;
+  text-align: left;
+  float: right;
+}
+
+:root {
+  --mainColor: #7575a3;
+
+}
+
+
+link1 {
+  position: absolute;
+  top: 370px;
+  background:
+     linear-gradient(
+       to bottom, var(--mainColor) 0%,
+       var(--mainColor) 100%
+     );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+  color: #000;
+  text-decoration: none;
+  transition: background-size .2s;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 25px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+link1:hover {
+  background-size: 4px 50px;
+}
+
+link2 {
+  position: absolute;
+  top: 410px;
+  background:
+     linear-gradient(
+       to bottom, var(--mainColor) 0%,
+       var(--mainColor) 100%
+     );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+  color: #000;
+  text-decoration: none;
+  transition: background-size .2s;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 25px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+link2:hover {
+  background-size: 4px 50px;
+}
+
+
+.credito a {
+  background-color: none;
+  position: fixed; 
+  color: #000;
+  transition: 0.3s; 
+  right:15px; 
+  bottom:20px; 
+  font-size:13px;
+  font-style:normal;
+  letter-spacing:0.5px; 
+  font-weight:; 
+  text-align:right;
+   z-index: 99999;
+}
+
+
+h1 {
+  text-align: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+h1:nth-child(1) a {
+  color: #14141f;
+}
+
+h1:nth-child(1) a:hover {
+  -webkit-animation: neon 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon 1.5s ease-in-out infinite alternate;
+  animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+h1 a:hover {
+  color: #ffffff;
+}
+
+@-webkit-keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+}
+
+@-moz-keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+  }
+}
+
+
+</style>
+
+<body>
+
+<div align="middle">
+ <img src="logo2s.png" style="width: 35%">
+</div>
+
+<div align="middle" href="#">
+  <link1 onclick="on()">Projeto</link2>
+</div>
+
+<div id="overlay" onclick="off()">
+  <div id="header">PROJETO</div>
+  
+  <div id="text0">O projeto TDO <i>System</i> é um sistema de monitoramento e acesso de máquinas industriais via web. Visto a dificuldade na área da indústria relacionado ao monitoramento de máquinas, nosso intuito é transmitir informações a partir delas sobre: níveis de temperatura e umidade; possíveis sinais de fumaça; informações de uso e permissões. </div>
+</div>
+
+
+<div align="middle" href="#">
+  <link2 onclick="on2()">Integrantes</link2>
+</div>
+
+<div id="overlay2" onclick="off2()">
+    <div id="header">INTEGRANTES</div> 
+
+<div id="conteudo">
+
+<div id="conteudo-left">
+  <img class="pht1" src="babs.jpeg" style="width: 33%;">
+  <div id="text1">
+    <p>• Bárbara Amanda •</p>
+      > Progamação dos sensores.</br> 
+      > Apresentação de slides.</br>
+  </div>
+  <img class="pht2" src="tononb.jpeg" style="width: 33%;">
+  <div id="text2">
+    <p>• Bianca Tonon •</p>
+      > Progamação dos sensores.</br> 
+      > Criação e progamação dos sites.</br>
+  </div> 
+</div>
+
+<div id="conteudo-right">
+  <img class="pht3" src="lucs.jpg" style="width: 33%;">
+  <div id="text3">
+    <p>• Lucas Duarte •</p>
+      > Pesquisas.</br> 
+      > </br> 
+  </div>
+  <img class="pht4" src="yuri.jpg" style="width: 33%;">
+  <div id="text4">
+    <p>• Yuri Aparecido •</p>
+    > Documentações.</br> 
+    > </br>
+  </div>
+</div>
+</div>
+ 
+</div></div>
+
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+
+function on2() {
+  document.getElementById("overlay2").style.display = "block";
+}
+
+function off2() {
+  document.getElementById("overlay2").style.display = "none";
+}
+
+</script>
+
+<div class="credito"> 
+  <h1><a title="design by:">TononB⋆</br> FF</a></h1>
+</div> 
+
+</body>
+</html> 
